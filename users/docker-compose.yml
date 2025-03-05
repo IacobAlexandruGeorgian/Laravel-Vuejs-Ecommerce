@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+    users:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            DB_HOST: db
+            DB_DATABASE: users
+            DB_USERNAME: admin1
+            DB_PASSWORD: admin1
+        command: 'php artisan serve --host=0.0.0.0 --port=8000'
+        ports:
+            - 8001:8000
+        depends_on:
+            - db
+
+    db:
+        container_name: users_db
+        image: mysql:8.0
+        environment:
+            MYSQL_DATABASE: users
+            MYSQL_USER: admin1
+            MYSQL_PASSWORD: admin1
+            MYSQL_ROOT_PASSWORD: admin1
+        volumes:
+            - ./storage/dbdata:/var/lib/mysql
+        ports:
+            - 33068:3306
+
