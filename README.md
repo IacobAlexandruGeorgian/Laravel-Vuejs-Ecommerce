@@ -5,6 +5,7 @@
         - Laravel 10
         - MySQL
         - VueJs 3
+        - Nuxt
         - Docker
         - RabbitMq
 
