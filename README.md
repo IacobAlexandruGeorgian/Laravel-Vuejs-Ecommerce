@@ -13,7 +13,7 @@
     - Authentification (Register / Login + Gates)
     - Admin dashboard
     - Client Dashboard
-    - Payment (Netopia)
+    - Payment (Stripe)
 
 ![Screenshot 2024-03-19 102743](https://github.com/user-attachments/assets/9af7a8f0-9216-4393-8dc7-572def21d573)
 
